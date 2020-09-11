@@ -9,6 +9,7 @@ int main(int argc, char* argv[])
     return 0;
 }
 //help
+// Made By DracoYT https://github.com/dracoYT/MathC
 if(!strcmp(argv[1], "help"))
 {
     printf("\n");
@@ -71,6 +72,7 @@ if(!strcmp(argv[1], "help"))
       if(!strcmp(argv[1], "-v"))
   {
  printf("Version: math@1.0.3" );
+ printf("Made by @DracoYT");
       }
 
 
