@@ -1,18 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
-int main(int argc, char* argv[])
+void help()
 {
-
-    if(argc < 2){
-    return 0;
-}
-//help
-// Made By DracoYT https://github.com/dracoYT/MathC
-if(!strcmp(argv[1], "help"))
-{
-    printf("\n");
+   printf("\n");
     printf("Math`C app help\n");
     printf("Ussage: math [ctab | -m | -d | -sqrt | -a | -s | -v | help] [args...]");
     printf(
@@ -27,6 +20,21 @@ if(!strcmp(argv[1], "help"))
         "\n If you want help 'n maths don't ask me!\n"
 
     );
+
+}
+
+int main(int argc, char* argv[])
+{
+
+    if(argc < 2){
+        help();
+    return 0;
+}
+//help
+// Made By DracoYT https://github.com/dracoYT/MathC
+if(!strcmp(argv[1], "help"))
+{
+ help();
 
 }
 
@@ -66,7 +74,8 @@ if(!strcmp(argv[1], "help"))
 
             if(!strcmp(argv[1], "-sqrt"))
   {
- printf("Oh, your values are... I don't know because I dont make this function yet" );
+      double res = sqrt(atoi(argv[2]));
+ printf("Result:%f", res );
       }
 
       if(!strcmp(argv[1], "-v"))
