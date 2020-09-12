@@ -1,7 +1,7 @@
 # MathC
 A simple C calculator made in 2 hours.
 
-### Sintaxy
+### Syntax
 Ussage: math [ctab | -m | -d | -sqrt | -a | -s | -v | help] [args...]
 | Command | Description | Arguments |
 | --- | --- | --- |
