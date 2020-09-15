@@ -11,5 +11,5 @@ Usage: math [ctab | -m | -d | -sqrt | -a | -s | -sd | -v | help] [args...]
 |-m | Muestra las diferencias de archivo que no han sido preparadas | [Args: < number1 > < number2 >] |
 |-d | Muestra las diferencias de archivo que no han sido preparadas |[Args: < number to divide > < divisor >] |
 |-sqrt | Rooting | [Args: < radical index > < residing >] |
-|-sd | Second degree equation solver | [Args: < x^2 coefficient > < x coefficient > < constant term >] |
+|-sd | Second degree equation solver | [Args: < x^2 coefficient > < x coefficient > < constant >] |
 |-v | Show the version of MATH plugin. | N/A |
