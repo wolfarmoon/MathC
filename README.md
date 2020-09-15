@@ -2,7 +2,7 @@
 A simple C calculator made in 2 hours.
 
 ### Syntax
-Ussage: math [ctab | -m | -d | -sqrt | -a | -s | -v | help] [args...]
+Usage: math [ctab | -m | -d | -sqrt | -a | -s | -v | help] [args...]
 | Command | Description | Arguments |
 | --- | --- | --- |
 | ctab | Shows the multiplication table of the requested value | [Args: < number > ] |
