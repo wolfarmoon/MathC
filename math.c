@@ -7,7 +7,7 @@ void help()
 {
     printf("\n");
     printf("Math`C app help\n");
-    printf("Usage: math [ctab | -m | -d | -sqrt | -a | -s | -v | help] [args...]");
+    printf("Usage: math [ctab | -m | -d | -sqrt | -a | -s | -sd | -v | help] [args...]");
     printf(
         "\nctab        | Shows the multiplication table of the requested value [Args: <number> ]\n"
         "-m          | Multiplication [Args: <number1> <number2>]\n"
@@ -15,6 +15,7 @@ void help()
         "-sqrt       | Root [Args: <radical index> <residing>]\n"
         "-a          | Add [Args: <number1> <number2>]\n"
         "-s          | Substract [Args: <number1> <number2>]\n"
+        "-sd         | Second degree equation solver [Args: <x^2 coefficient> <x coefficient> <constant term>]\n"
         "-v          | Show the version of MATH plugin. \n"
         "\n"
         "\n If you want help 'n maths don't ask me!\n"
@@ -75,6 +76,35 @@ int main(int argc, char *argv[])
         double res = sqrt(atoi(argv[2]));
         printf("%f\n", res);
     }
+    //Second degree Equation Solver
+    //-------------------
+    //D=b^2-4ac
+    //x1=(-b+sqrt(D))/2a
+    //x2=(-b-sqrt(D))/2a
+    //-------------------
+	if (!strcmp(argv[1], "-sd"))
+	{
+		double delta = pow(atof(argv[3]), 2.0) - 4.0 * atof(argv[2]) * atof(argv[4]);
+		if(atof(argv[2]) == 0.0)
+        {
+            printf("Second degree can't have x^2 coeffecient equal to 0\n");
+        }
+        else
+        {
+            if (delta < 0)
+            {
+                printf("No solution in R\n");
+            }
+            else if (delta == 0.0)
+            {
+                printf("%lf\n", (-atof(argv[3])) / (2.0 * atof(argv[2])));
+            }
+            else
+            {
+                printf("%lf\t%lf\n", (-atof(argv[3]) + sqrt(delta)) / (2.0 * atof(argv[2])), (-atof(argv[3]) - sqrt(delta)) / (2.0 * atof(argv[2])));
+            }
+        }
+	}
 
     if (!strcmp(argv[1], "-v"))
     {
